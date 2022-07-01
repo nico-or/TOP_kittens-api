@@ -1,24 +1,34 @@
-# README
+# Kittens API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implementation of a simple API that serves Kitten objects.
 
-Things you may want to cover:
+Technical requirements:
 
-* Ruby version
+- Rails app
+  - Should have a Kitten model with ```:name```, ```:age```, ```:cuteness``` and ```:softness``` attributes.
+  - Should have a controller with the 7 RESTful actions (```:index```, ```:show```, ```:new```, ```:create```, ```:edit```, ```:update```, ```:delete```).
 
-* System dependencies
+- HTML site
+  - Should have a default route of ```kittens#index```.
+  - Should provide basic HTML pages that:
+    - ```#index```: list all kittens.
+    - ```#show```: displat a single kitten.
+    - ```#new```: render a simple kitten creation form.
+    - ```#edit```: render a simple kitten modification form.
+  - Should provide ```delete (#destroy)``` links on:
+    - Kittens's show page.
+    - Kittens's edit page.
+    - Nexto to each kitten in the index page.
+  - Should render the Flash contents when present
+    - It coungratulates the user after creating, updating or deleting (!?) a kitten.
+    - It mocks the user when they commit a form mistake.
 
-* Configuration
+- API
+  - Should send JSON data.
+  - Should implement the ```#index``` and ```#show``` methods.
 
-* Database creation
+---
 
-* Database initialization
+This repo is an implementation of the [Kittens API](https://www.theodinproject.com/lessons/ruby-on-rails-kittens-api) project.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is part of [The Odin Project](https://www.theodinproject.com/).
